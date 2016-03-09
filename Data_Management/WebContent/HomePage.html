@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="salesApp">
+<head>
+<title>Data Management</title>
+<script type="text/javascript">
+  function showLeftPanel() {
+    var elem = document.getElementById("left-panel");
+    elem.classList.toggle("show");
+  }
+</script>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/sales/salesDetails.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="css/style.css">
+	
+</head>
+<body>
+
+<div ng-controller="salesDetailsController" style="width:100%">
+<div id="left-panel">
+  <a href="#" onclick="showLeftPanel();" class="controller">
+  <img ng-src="images/left-arrow.jpg" width="30px" height="30px">
+  </a>
+  &nbsp;
+  <h2>Information Panel</h2>
+  <table>
+  <tr>
+  <td>
+  Enquiry form 'Medicine en' was added
+  </td>
+  </tr>
+  <tr>
+  <td>
+  Quotation Form 'Dell ESeries' was added
+  </td>
+  </tr>
+  </table>
+</div>
+<h1><center>Data Management</center></h1>
+
+<div ng-include="'Menu.html'">
+</div>
+<div ng-include="'Home.html'">
+</div>
+<div ng-include="'PurchaseOrder.html'">
+</div>
+<div ng-include="'Quotation.html'">
+</div>
+<div ng-include="'Enquiry.html'">
+</div>
+<div ng-include="'Inventory.html'">
+</div>
+<div ng-include="'Sales.html'">
+</div>
+<div ng-include="'InwardDC.html'">
+</div>
+<div ng-include="'ItemMaster.html'">
+</div>
+<div ng-include="'Vendor.html'">
+</div>         
+</div>
+</body>
+</html>

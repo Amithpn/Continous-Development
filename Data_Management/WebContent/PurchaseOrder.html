@@ -1,0 +1,79 @@
+<div ng-show="isPurchase" align="left">
+<br>
+<center><h2>Purchase Order</h2></center>
+<form method="get" name="purchaseForm">
+<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="70%">
+
+<tr><td>
+<h3>Vendor Details:</h3>
+</td>
+</tr>
+<tr><td class="input-list style-2 clearfix">
+<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
+<td class="input-list style-2 clearfix">
+<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
+</tr>
+<tr><td>
+<h3>Ship To:</h3>
+</td>
+</tr>
+<tr> <td class="input-list style-2 clearfix">
+<label>First Name:</label><input type="text" name="FirstName"></td>
+<td class="input-list style-2 clearfix">
+<label>Last Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="LastName"></td>
+</tr>
+<tr>
+<td class="input-list style-2 clearfix">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" name="address"></textarea>
+</td>
+</tr>
+<tr>
+<td align="right">
+<h3>Item Details:</h3>
+</td>
+<td><button type="button" type="button" ng-click="addItems()">+</button></td>
+</tr>
+<tr>
+<table cellspacing="1"  width="90%" align="center" ng-repeat="order in purchaseOrderList" ng-show="add" >
+				<tr>
+				<td>
+				<label>Item Name: </label>
+				</td>
+				<td class="input-list style-2 clearfix" align="left">
+				<input type="text" name="itemName" ng-model="order.itemName">
+				</td>
+				
+				<td>
+				<label>Quantity: </label>
+</td>
+<td class="input-list style-2 clearfix">
+				<input type="text" name="quantity" ng-model="order.quantity">
+				</td>
+				
+				<td>
+				<label>Price: </label>
+</td>
+<td class="input-list style-2 clearfix">
+				<input type="text" name="price" ng-model="order.price">
+				</td>
+				</tr>
+		
+</table>
+
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td>
+<table style="table-layout: fixed" align="right" cellpadding="5" border="0" cellspacing="0" width="50%">
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+		<tr>
+<td ><button type="button" type="button" >Submit</button></td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+
+</div>

@@ -1,0 +1,126 @@
+<div ng-show="isInventory">
+<br>
+<h2 align="center">Inventory</h2>
+<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="70%">
+<tr>
+<td align="right" >
+<button type="button" name="existingVendor" ng-click="openInputBox()">Existing Vendor</button>
+</td>
+<td>
+<button type="button" name="newVendor" ng-click="addNewVendor()">New Vendor</button>
+</td>
+</tr>
+<tr>
+<td ng-show="existingVen" align="right" class="input-list style-2 clearfix">
+<form method="get" name="getVendorId">
+<label>Vendor Id:</label> <input type="text" name="vendorId" ng-model="vendorId">
+</form>
+</td>
+<td ng-show="showSubmit">
+<button type="button" name="submitInv" ng-click="submitVendorId('vendorId')">Submit</button>
+</td>
+<td ng-show="addInventory">
+<button type="button" type="button" ng-click="submitVendorId()">+</button>
+</td>
+</tr>
+</table>
+<table cellspacing="1"  width="90%" align="center" ng-repeat="inventory in inventoryList" ng-show="addInventory" >
+				<tr>
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" ng-model="inventory.itemId">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" ng-model="inventory.unitPrice">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>No. of Units: </label>
+				<input type="text" name="itemName" ng-model="inventory.noOfUnits">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Total Price: </label>
+				<input type="text" name="itemName" ng-model="inventory.totalPrice">
+				</td>
+
+</table>
+
+<form method="get" name="quotationForm" ng-show="addVendor">
+<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="70%">
+
+<tr><td>
+<h3>Vendor Details:</h3>
+</td>
+</tr>
+<tr><td class="input-list style-2 clearfix">
+<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
+<td class="input-list style-2 clearfix">
+<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
+</tr>
+<tr>
+<td class="input-list style-2 clearfix">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" name="address"></textarea>
+</td>
+</tr>
+<tr>
+<td align="right">
+<h3>Item Details:</h3>
+</td>
+<td><button type="button" type="button" ng-click="addQuotation()">+</button></td>
+</tr>
+<tr>
+<table cellspacing="1"  width="90%" align="center" ng-repeat="quote in quotationList" ng-show="addQuote" >
+				<tr>
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" ng-model="quote.itemId">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" ng-model="quote.itemName">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Description: </label>
+				<input type="text" name="itemName" ng-model="quote.itemDesc">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" ng-model="quote.unitPrice">
+				</td>
+				
+				<td class="input-list style-2 clearfix">
+				<label>Quantity: </label>
+				<input type="text" name="quantity" ng-model="quote.quantity">
+				</td>
+				
+				<td class="input-list style-2 clearfix">
+				<label>Total Amount: </label>
+				<input type="text" name="price" ng-model="quote.totalAmt">
+				</td>
+				</tr>
+		
+</table>
+
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td>
+<table style="table-layout: fixed" align="right" cellpadding="5" border="0" cellspacing="0" width="50%">
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+		<tr>
+<td ><button type="button" type="button" >Submit</button></td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+
+</div>

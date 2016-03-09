@@ -1,0 +1,65 @@
+<div ng-show="isIDC">
+<br>
+<center><h2>Inward Delivery Challan</h2></center>
+<form method="get" name="inwardDCForm">
+<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="45%">
+<tr><td class="input-list style-2 clearfix">
+<label>Quotation Id:</label> <input type="text" name="quotationId" value=""></td>
+<td class="input-list style-2 clearfix">
+<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
+<td class="input-list style-2 clearfix">
+<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
+</tr>
+</table>
+<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="95%">
+<tr><td align="right">
+<h3>Items Received Details</h3>
+</td>
+<td><button type="button" type="button" ng-click="addIDC()">+</button></td>
+</tr>
+
+<tr>
+<table cellspacing="1"  width="90%" align="center" ng-repeat="challan in InwardDCList" ng-show="InwardDC" >
+				<tr>
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" ng-model="challan.itemId">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" ng-model="challan.itemName">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Quantity: </label>
+				<input type="text" name="itemName" ng-model="challan.quantity">
+				</td>
+				
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" ng-model="challan.unitPrice">
+				</td>
+
+				<td class="input-list style-2 clearfix">
+				<label>Total Amount: </label>
+				<input type="text" name="price" ng-model="challan.totalAmt">
+				</td>
+				</tr>
+		
+</table>
+
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td>
+<table style="table-layout: fixed" align ="right" cellpadding="5" border="0" cellspacing="0" width="50%">
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+		<tr>
+<td ><button type="button" type="button" >Submit</button></td></td>
+</tr>
+</table>
+</table>
+</form>
+</div>
