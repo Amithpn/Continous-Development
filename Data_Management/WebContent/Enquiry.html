@@ -18,8 +18,8 @@
 <label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" name="address"></textarea>
 </td>
 </tr>
-<tr>
-<td align="right">
+<tr align="left">
+<td>
 <h3>Item Details:</h3>
 </td>
 <td><button type="button" type="button" ng-click="addQuotation()">+</button></td>
@@ -57,7 +57,13 @@
 				<input type="text" name="price" ng-model="quote.totalAmt">
 				</td>
 				</tr>
-		
+				
+				<tr>
+				<td class="input-list style-2 clearfix" align="left">
+				<label>Total items: </label>
+				<span>0</span>
+				</td>
+				</tr>
 </table>
 
 </tr>

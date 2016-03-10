@@ -4,12 +4,18 @@
 <form method="get" name="inwardDCForm">
 <table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="45%">
 <tr><td class="input-list style-2 clearfix">
-<label>Quotation Id:</label> <input type="text" name="quotationId" value=""></td>
+<label>Purchase Order Id:</label> <input type="text" name="purchaseOrderId" value=""></td>
 <td class="input-list style-2 clearfix">
 <label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
 <td class="input-list style-2 clearfix">
 <label>Vendor Name: </label><input type="text" name="vendorName" ></td>
 </tr>
+<!-- <tr>
+<td class="input-list style-2 clearfix">
+<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
+<td class="input-list style-2 clearfix">
+<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
+</tr> -->
 </table>
 <table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="95%">
 <tr><td align="right">
@@ -17,6 +23,7 @@
 </td>
 <td><button type="button" type="button" ng-click="addIDC()">+</button></td>
 </tr>
+
 
 <tr>
 <table cellspacing="1"  width="90%" align="center" ng-repeat="challan in InwardDCList" ng-show="InwardDC" >

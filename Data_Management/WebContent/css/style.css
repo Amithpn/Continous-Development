@@ -1,7 +1,7 @@
 h1 {
 	background-color: #f3f3f3;
 	color: #369;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Helvetica;
 	font-size: 250%;
 }
 
@@ -59,7 +59,7 @@ li.dropdown {
 }
 .style-2 input[type="text"] {
   padding: 2px;
-  border: solid 5px #c9c9c9;
+  border: solid 3px #c9c9c9;
   transition: border 0.3s;
 }
 .style-2 input[type="text"]:focus,
@@ -68,7 +68,7 @@ li.dropdown {
 }
 .style-2 textarea {
   padding: 10px;
-  border: solid 5px #c9c9c9;
+  border: solid 3px #c9c9c9;
   transition: border 0.3s;
 }
 .style-2 textarea:focus,
@@ -77,7 +77,8 @@ li.dropdown {
 }
 label { 
 	font: bold; 
-	font-weight: bold
+	font-weight: 400;
+	font-family: Helvetica;
 }
 div {
 	box-shadow: 10px 10px 5px #888888;
