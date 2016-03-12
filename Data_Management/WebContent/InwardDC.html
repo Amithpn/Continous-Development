@@ -1,72 +1,81 @@
-<div ng-show="isIDC">
+<div ng-show="isIDC" class="container">
 <br>
-<center><h2>Inward Delivery Challan</h2></center>
-<form method="get" name="inwardDCForm">
-<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="45%">
-<tr><td class="input-list style-2 clearfix">
-<label>Purchase Order Id:</label> <input type="text" name="purchaseOrderId" value=""></td>
-<td class="input-list style-2 clearfix">
-<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
-<td class="input-list style-2 clearfix">
-<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
-</tr>
-<!-- <tr>
-<td class="input-list style-2 clearfix">
-<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
-<td class="input-list style-2 clearfix">
-<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
-</tr> -->
-</table>
-<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="95%">
-<tr><td align="right">
-<h3>Items Received Details</h3>
-</td>
-<td><button type="button" type="button" ng-click="addIDC()">+</button></td>
-</tr>
+<h2>Inward Delivery Challan</h2>
+<form method="get" name="inwardDCForm" class="form-inline" role="form">
+<div class="well  well-sm" style="width:50%">Challan Details:</div>
 
 
-<tr>
-<table cellspacing="1"  width="90%" align="center" ng-repeat="challan in InwardDCList" ng-show="InwardDC" >
-				<tr>
-				<td class="input-list style-2 clearfix" align="left">
+<br><br>
+
+<div class="form-group">
+<label>Vendor Id: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="vendorId" class="form-control" ></div>
+<div class="form-group">
+<label>Vendor Name: </label>
+<input type="text" name="vendorName" class="form-control" ></div>
+<br><br>
+<div class="form-group">
+<label>E-SUGAM Id: </label><input type="text" name="eSugamId" class="form-control" ></div>
+<br>
+<br>
+<div class="form-group">
+<label>Purchase Order Id:</label> <select name="purchaseOrderId" class="form-control">
+	<option value="ALL">Purchase Order ID</option>
+    <option value="1">OD1</option>
+    <option value="2">OD2</option>
+    <option value="3">OD3</option>
+  </select>
+</div>
+<!-- <td class="input-list style-2 clearfix">
+<label>E-SUGAM Id:</label> <input type="text" name="vendor" value=""></td> -->
+<div class="form-group">
+<label>Mode Of Delivery: </label><select name="Mode of Delivery" class="form-control">
+	<option value="ALL">Mode of Delivery</option>
+    <option value="byHand">By Hand</option>
+    <option value="courier">Courier</option>
+    <option value="vehicle">Vehicle</option>
+  </select>
+</div>
+<br><br>
+<div class="form-group">
+<button type="button" class="btn btn-info" ng-click="addIDC()">
+    <span class="glyphicon glyphicon-plus"></span>  Items Received Details
+</button>
+</div>
+
+<div ng-repeat="challan in InwardDCList" ng-show="InwardDC">
+				
+				<br><br>
+				<div class="col-xs-2">
 				<label>Item Id: </label>
-				<input type="text" name="itemName" ng-model="challan.itemId">
-				</td>
+				<input type="text" name="itemName" class="input-sm" ng-model="challan.itemId">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" name="itemName" ng-model="challan.itemName">
-				</td>
+				<input type="text" name="itemName" class="input-sm" ng-model="challan.itemName">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" name="itemName" ng-model="challan.quantity">
-				</td>
+				<input type="text" name="itemName" class="input-sm" ng-model="challan.quantity">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Unit Price: </label>
-				<input type="text" name="itemName" ng-model="challan.unitPrice">
-				</td>
+				<input type="text" name="itemName" class="input-sm" ng-model="challan.unitPrice">
+				</div>
 
-				<td class="input-list style-2 clearfix">
+				<div class="col-xs-2">
 				<label>Total Amount: </label>
-				<input type="text" name="price" ng-model="challan.totalAmt">
-				</td>
-				</tr>
+				<input type="text" name="price" class="input-sm" ng-model="challan.totalAmt">
+				</div>
+				<br><br>
 		
-</table>
-
-</tr>
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td>
-<table style="table-layout: fixed" align ="right" cellpadding="5" border="0" cellspacing="0" width="50%">
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-		<tr>
-<td ><button type="button" type="button" >Submit</button></td></td>
-</tr>
-</table>
-</table>
+</div>
+<br><br>
+<div class="form-group"> 
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
 </form>
 </div>

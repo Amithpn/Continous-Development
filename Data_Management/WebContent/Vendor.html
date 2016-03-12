@@ -1,24 +1,20 @@
-<div ng-show="isVendor">
+<div ng-show="isVendor" class="container">
 <br>
-<center><h2>Add New Vendor</h2></center>
-<form method="get" name="vendorForm">
-<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="70%">
+<h2>Add New Vendor</h2>
+<form method="get" name="vendorForm" class="form-inline" role="form">
 
-<tr><td>
-<h3>Vendor Details:</h3>
-</td>
-</tr>
-<tr><td class="input-list style-2 clearfix">
-<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
-<td class="input-list style-2 clearfix">
-<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
-</tr>
-<tr>
-<td class="input-list style-2 clearfix">
-<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" name="address"></textarea>
-</td>
-</tr>
-<tr>
+<div class="well  well-sm" style="width:50%">Vendor Details:</div>
+<div class="form-group">
+<label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value=""></div>
+
+<div class="form-group">
+<label>Vendor Name: </label><input type="text" class="form-control" name="vendorName" ></div>
+
+<br><br>
+<div class="form-group">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" class="form-control" name="address"></textarea>
+</div>
+<!-- <tr>
 <td align="right">
 <h3>Item Details:</h3>
 </td>
@@ -61,19 +57,11 @@
 </table>
 
 </tr>
-
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td>
-<table style="table-layout: fixed" align="right" cellpadding="5" border="0" cellspacing="0" width="50%">
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-		<tr>
-<td ><button type="button" type="button" >Submit</button></td></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
+ -->
+ <br><br>
+<div class="form-group"> 
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
+</form>
 </form>
 </div> 

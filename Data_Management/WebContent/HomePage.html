@@ -10,14 +10,30 @@
 </script>
 <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
 <script type="text/javascript" src="js/sales/salesDetails.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="css/style.css">
-	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="scripts/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+	<style type="text/css">
+	.bs-example{
+    	margin: 20px;
+    }
+    hr{
+        margin: 60px 0;
+    }
+    .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    background-color: #28a4c9;
+}
+
+    
+</style>
 </head>
 <body>
 
 <div ng-controller="salesDetailsController" style="width:100%">
-<div id="left-panel">
+<!-- <div id="left-panel">
   <a href="#" onclick="showLeftPanel();" class="controller">
   <img ng-src="images/left-arrow.jpg" width="30px" height="30px">
   </a>
@@ -35,8 +51,8 @@
   </td>
   </tr>
   </table>
-</div>
-<h1><center>Data Management</center></h1>
+</div> -->
+<div class="well well-lg"><h1>Data Management</h1></div>
 
 <div ng-include="'Menu.html'">
 </div>
@@ -57,7 +73,94 @@
 <div ng-include="'ItemMaster.html'">
 </div>
 <div ng-include="'Vendor.html'">
-</div>         
+</div> 
+
+<!-- <div class="row" >
+<div class="col-md-4">
+<div class="panel panel-default">
+<div class="panel-heading"> <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+<div class="panel-body" >
+<div class="row">
+<div class="col-xs-12">
+<ul class="demo1">
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/1.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/2.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/3.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/4.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/5.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/6.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+<li class="news-item">
+<table cellpadding="4">
+<tr>
+<td><img src="images/7.png" width="60" class="img-circle" /></td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+</tr>
+</table>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<script type="text/javascript">
+    $(function () {
+        $(".demo1").bootstrapNews({
+            newsPerPage: 3,
+            autoplay: true,
+			pauseOnHover:true,
+            direction: 'up',
+            newsTickerInterval: 4000,
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+    });
+</script>
+        
 </div>
 </body>
 </html>
