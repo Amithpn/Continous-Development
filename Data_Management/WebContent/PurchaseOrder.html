@@ -1,6 +1,7 @@
-<div ng-show="isPurchase" class="container">
+<div ng-show="isPurchase" style="margin-left:70px !important;">
 <br>
 <h2>Purchase Order</h2>
+<div class="col-sm-7">
 <form method="get" name="purchaseForm" class="form-inline" role="form">
 
 <div class="well  well-sm" style="width:50%">Vendor Details:</div>
@@ -17,43 +18,50 @@
     <span class="glyphicon glyphicon-plus"></span>  Add Item Details
 </button>
 </div>
-<div ng-repeat="order in purchaseOrderList" ng-show="add">
-				
+</div>
 <br><br>
+<div class="col-sm-12">
+<br>
+<div ng-repeat="order in purchaseOrderList" ng-show="add">
+
 				<div class="col-xs-2">
 				<label>Item Name: </label>
-				
-				<input type="text" name="itemName" class="input-sm"  ng-model="order.itemName">
+				<input type="text" name="itemName" class="form-control"  ng-model="order.itemName">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Quantity: </label>
-				
-				<input type="text" name="quantity" class="input-sm"  ng-model="order.quantity">
+				<input type="text" name="quantity" class="form-control"  ng-model="order.quantity">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Price: </label>
-				<input type="text" name="price" class="input-sm"  ng-model="order.price">
+				<input type="text" name="price" class="form-control"  ng-model="order.price">
 				</div>
-				<br><br>
+				<br><br><br>
 </div>
-<br><br>
+</div>
+<div class="col-sm-7">
+<br>
 <div class="well  well-sm" style="width:50%">Ship To:</div>
 
-<div class="form-group">
-<label>First Name:</label><input type="text" class="form-control" name="FirstName"></div>
-<div class="form-group">
-<label>Last Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" name="LastName"></div>
+<div class="col-xs-3">
+<label>First Name:</label><input type="text" class="form-control" name="FirstName">
+</div>
 
-<br><br>
-<div class="form-group">
+<div class="col-xs-3">
+<label>Last Name:</label><input type="text" class="form-control" name="LastName">
+</div>
+
+<br><br><br>
+<div class="col-xs-3">
 <label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" class="form-control" name="address"></textarea>
 </div>
-<br><br>
+<br><br><br>
 <div class="form-group"> 
+<br><br><br><br>
     <button type="submit" class="btn btn-info">Submit</button>
 </div>
 </form>
-
+</div>
 </div>

@@ -1,6 +1,8 @@
-<div ng-show="isQuotation" class="container">
+<div ng-show="isQuotation" style="margin-left:70px !important;">
 <br>
 <h2>Quotation Form</h2>
+
+<div class="col-sm-7">
 <form method="get" name="quotationForm" class="form-inline">
 
 
@@ -26,37 +28,42 @@
     <span class="glyphicon glyphicon-plus"></span>  Add Item Details
 </button>
 </div>
+</div>
+<br><br>
+
+<div class="col-sm-12">
+
 <div ng-repeat="quote in quotationList" ng-show="addQuote">
 				
 				<br><br>
 				<div class="col-xs-2">
 				<label>Item Id: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="quote.itemId">
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemId">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="quote.itemName">
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemName">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Item Description: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="quote.itemDesc">
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemDesc">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Unit Price: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="quote.unitPrice">
+				<input type="text" name="itemName" class="form-control" ng-model="quote.unitPrice">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" name="quantity" class="input-sm" ng-model="quote.quantity">
+				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Total Amount: </label>
-				<input type="text" name="price" class="input-sm" ng-model="quote.totalAmt">
+				<input type="text" name="price" class="form-control" ng-model="quote.totalAmt">
 				</div>
 				<br>
 				<br>				
@@ -68,4 +75,5 @@
     <button type="submit" class="btn btn-info">Submit</button>
 </div>
 </form>
+</div>
 </div>

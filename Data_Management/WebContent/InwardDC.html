@@ -1,4 +1,4 @@
-<div ng-show="isIDC" class="container">
+<div ng-show="isIDC" style="margin-left:70px !important;">
 <br>
 <h2>Inward Delivery Challan</h2>
 <form method="get" name="inwardDCForm" class="form-inline" role="form">
@@ -6,7 +6,7 @@
 
 
 <br><br>
-
+<div class="col-sm-7">
 <div class="form-group">
 <label>Vendor Id: </label>&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="text" name="vendorId" class="form-control" ></div>
@@ -37,38 +37,41 @@
   </select>
 </div>
 <br><br>
+
 <div class="form-group">
 <button type="button" class="btn btn-info" ng-click="addIDC()">
     <span class="glyphicon glyphicon-plus"></span>  Items Received Details
 </button>
 </div>
-
+</div>
+<div class="col-sm-12">
+<br>
 <div ng-repeat="challan in InwardDCList" ng-show="InwardDC">
 				
 				<br><br>
 				<div class="col-xs-2">
 				<label>Item Id: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="challan.itemId">
+				<input type="text" name="itemName" class="form-control" ng-model="challan.itemId">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="challan.itemName">
+				<input type="text" name="itemName" class="form-control" ng-model="challan.itemName">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="challan.quantity">
+				<input type="text" name="itemName" class="form-control" ng-model="challan.quantity">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Unit Price: </label>
-				<input type="text" name="itemName" class="input-sm" ng-model="challan.unitPrice">
+				<input type="text" name="itemName" class="form-control" ng-model="challan.unitPrice">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Total Amount: </label>
-				<input type="text" name="price" class="input-sm" ng-model="challan.totalAmt">
+				<input type="text" name="price" class="form-control" ng-model="challan.totalAmt">
 				</div>
 				<br><br>
 		
@@ -76,6 +79,7 @@
 <br><br>
 <div class="form-group"> 
     <button type="submit" class="btn btn-info">Submit</button>
+</div>
 </div>
 </form>
 </div>

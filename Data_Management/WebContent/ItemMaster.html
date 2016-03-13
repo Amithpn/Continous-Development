@@ -1,136 +1,132 @@
-<div ng-show="isItemMaster" class="container">
+<div ng-show="isItemMaster" style="margin-left:70px !important;">
 <br>
 <h2>Item Master</h2>
-<form method="get" name="itemMasterForm">
-<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="25%">
-<tr><td><input type="radio" id="search" ng-model="checked" value="search"  ng-click="showSearch('search')">Search Item</td>
 
-<td><input type="radio" id="newItem" ng-model="checked" value="newItem"  ng-click="showNewItem('newItem')">Add New Item</td>
-</tr>
-<tr ng-show="isSearch">
-<td class="input-list style-2 clearfix"><label>Enter Id: </label>
-<input type="text" name="searchId" value="" ng-keypress="showSearchResults()"></td>
-</tr>
-</table>
-<table style="table-layout: fixed" cellpadding="5" border="0" cellspacing="0" width="55%" ng-show="searchRes">
-<tr><td align="right">
-<h3>Items Details</h3>
-</td>
-</tr>
-<tr>
-<table cellspacing="1"  width="90%" align="center" ng-repeat="sRes in searchResList">
-				<tr>
-				<td class="input-list style-2 clearfix" align="left">
+<div class="form-group">
+<label class="radio-inline"><input type="radio" id="search" ng-model="checked" value="search" ng-click="showSearch('search')">Search Item</label>
+<label class="radio-inline"><input type="radio" id="newItem" ng-model="checked" value="newItem"  ng-click="showNewItem('newItem')">Add New Item</label>
+</div>
+
+<form method="get" name="quotationForm" ng-show="isAddNewItem" class="form-inline">
+<div class="col-sm-7">
+
+<div class="well  well-sm" style="width:50%">Vendor Details:</div>
+
+<div class="form-group">
+<label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value="">
+</div>
+<div class="form-group">
+<label>Vendor Name: </label><input type="text" class="form-control" name="vendorName" >
+</div>
+<br>
+<br>
+<div class="form-group">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" class="form-control" cols="25" name="address">
+</textarea>
+</div>
+
+<br>
+<br>
+<div class="form-group">
+<button type="button" class="btn btn-info" ng-click="addQuotation()">
+    <span class="glyphicon glyphicon-plus"></span>  Add Item Details
+</button>
+</div>
+</div>
+<br><br>
+
+<div class="col-sm-12">
+
+<div ng-repeat="quote in quotationList" ng-show="addQuote">
+				
+				<br><br>
+				<div class="col-xs-2">
 				<label>Item Id: </label>
-				<input type="text" name="itemName" ng-model="sRes.itemId" ng-disabled="enableEdit">
-				</td>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemId">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" name="itemName" ng-model="sRes.itemName" ng-disabled="enableEdit">
-				</td>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemName">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>No Of Units Left: </label>
-				<input type="text" name="itemName" ng-model="sRes.noOfUnits" ng-disabled="enableEdit">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Unit Price: </label>
-				<input type="text" name="itemName" ng-model="sRes.unitPrice" ng-disabled="enableEdit">
-				</td>
-				<td>
-				<a href="#" ng-click="enableEditF(sRes.itemId)"><img ng-src="images/edit-pencil.gif" ></a></td>
-				</tr>
-		
-</table>
-
-</tr>
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td ng-show="searchRes">
-<table style="table-layout: fixed" align ="right" cellpadding="5" border="0" cellspacing="0" width="50%">
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-		<tr>
-<td ng-show="searchRes"><button type="button" type="button" >Submit</button></td></td>
-</tr>
-</table>
-</table>
-</form>
-
-<form method="get" name="addNewItemForm" ng-show="isAddNewItem">
-<table style="table-layout: fixed" align="center" cellpadding="5" border="0" cellspacing="0" width="70%">
-
-<tr><td>
-<h3>Vendor Details:</h3>
-</td>
-</tr>
-<tr><td class="input-list style-2 clearfix">
-<label>Vendor Id:</label> <input type="text" name="vendor" value=""></td>
-<td class="input-list style-2 clearfix">
-<label>Vendor Name: </label><input type="text" name="vendorName" ></td>
-</tr>
-<tr>
-<td class="input-list style-2 clearfix">
-<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" name="address"></textarea>
-</td>
-</tr>
-<tr>
-<td align="right">
-<h3>Item Details:</h3>
-</td>
-<td><button type="button" type="button" ng-click="addQuotation()">+</button></td>
-</tr>
-<tr>
-<table cellspacing="1"  width="90%" align="center" ng-repeat="quote in quotationList" ng-show="addNewItem" >
-				<tr>
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Item Id: </label>
-				<input type="text" name="itemName" ng-model="quote.itemId">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Item Name: </label>
-				<input type="text" name="itemName" ng-model="quote.itemName">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Item Description: </label>
-				<input type="text" name="itemName" ng-model="quote.itemDesc">
-				</td>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemDesc">
+				</div>
 				
-				<td class="input-list style-2 clearfix" align="left">
+				<div class="col-xs-2">
 				<label>Unit Price: </label>
-				<input type="text" name="itemName" ng-model="quote.unitPrice">
-				</td>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.unitPrice">
+				</div>
 				
-				<td class="input-list style-2 clearfix">
+				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" name="quantity" ng-model="quote.quantity">
-				</td>
+				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
+				</div>
 				
-				<td class="input-list style-2 clearfix">
+				<div class="col-xs-2">
 				<label>Total Amount: </label>
-				<input type="text" name="price" ng-model="quote.totalAmt">
-				</td>
-				</tr>
-		
-</table>
+				<input type="text" name="price" class="form-control" ng-model="quote.totalAmt">
+				</div>
+				<br>
+				<br>				
 
-</tr>
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td>
-<table style="table-layout: fixed" align="right" cellpadding="5" border="0" cellspacing="0" width="50%">
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-		<tr>
-<td ><button type="button" type="button" >Submit</button></td></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
+</div>
+<br>
+<br>
+<div class="form-group" ng-show="isAddNewItem"> 
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
+</div>
 </form>
+<form method="get" name="itemMasterForm" class="form-inline" role="form">
+<div class="col-sm-7">
+
+<div ng-show="isSearch">
+<br>
+<div class="form-group">
+<label>Enter Id: </label>
+<input type="text" name="searchId" class="form-control" value="" ng-keypress="showSearchResults()">
+</div>
+</div>
+<div ng-show="searchRes">
+<br><br>
+<div class="well  well-sm" style="width:50%">Items Details</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div ng-repeat="sRes in searchResList">
+				<div class="col-xs-2">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.itemId" ng-disabled="enableEdit">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.itemName" ng-disabled="enableEdit">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>No Of Units Left: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.noOfUnits" ng-disabled="enableEdit">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="sRes.unitPrice" ng-disabled="enableEdit">
+				</div>
+				<div>
+				<a href="#" ng-click="enableEditF(sRes.itemId)"><img ng-src="images/edit-pencil.gif" ></a>
+				</div>
+		
+</div>
+<br><br>
+<div class="form-group" ng-show="searchRes"> 
+<br><br>
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
+</div>
+</form>
+
 </div>

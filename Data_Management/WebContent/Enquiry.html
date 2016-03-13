@@ -1,12 +1,10 @@
-<div ng-show="isEnquiry" class="container">
+<div ng-show="isEnquiry" style="margin-left:70px !important;">
 <br>
 <h1>Enquiry Form</h1>
 
-
-
-
+<div class="col-sm-7">
 <form method="get" name="quotationForm" class="form-inline" role="form">
-<div class="well  well-sm" style="width:50%">Vendor Details:</div>
+<div class="well  well-sm" style="width:70%">Vendor Details:</div>
 <div class="form-group">
 <label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
@@ -26,36 +24,39 @@
     <span class="glyphicon glyphicon-plus"></span>  Add Item Details
 </button>
 </div>
-<div  ng-show="addQuote" ng-repeat="quote in quotationList">
+</div>
+<br><br>
+<div class="col-sm-12">
+<div  ng-show="addQuote" ng-repeat="quote in quotationList" >
 				<br><br>
 				<div class="col-xs-2">
 				<label>Item Id: </label>
-				<input type="text" class="input-sm" name="itemName" ng-model="quote.itemId">
+				<input type="text" class="form-control" name="itemName" ng-model="quote.itemId">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" class="input-sm" name="itemName" ng-model="quote.itemName">
+				<input type="text" class="form-control" name="itemName" ng-model="quote.itemName">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Item Description: </label>
-				<input type="text" class="input-sm" name="itemName" ng-model="quote.itemDesc">
+				<input type="text" class="form-control" name="itemName" ng-model="quote.itemDesc">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Unit Price: </label>
-				<input type="text" class="input-sm" name="itemName" ng-model="quote.unitPrice">
+				<input type="text" class="form-control" name="itemName" ng-model="quote.unitPrice">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" class="input-sm" name="quantity" ng-model="quote.quantity">
+				<input type="text" class="form-control" name="quantity" ng-model="quote.quantity">
 				</div>
 
 				<div class="col-xs-2">
 				<label>Total Amount: </label>
-				<input type="text" class="input-sm" name="price" ng-model="quote.totalAmt">
+				<input type="text" class="form-control" name="price" ng-model="quote.totalAmt">
 				</div>
 				<br>
 				<br>
@@ -65,7 +66,7 @@
 <div class="form-group"> 
     <button type="submit" class="btn btn-info">Submit</button>
 </div>
-
+</div>
 <!-- <table cellspacing="0"  width="20%" align="right" ng-show="addQuote" >
 				<tr>
 				<td class="input-list style-2 clearfix" align="left">
@@ -81,10 +82,10 @@
 <!-- <button type="button" type="button" >Submit</button> -->
 
 </form>
-<!-- 
-<div class="container pull-right">
-<div class="row pull-right" >
-<div class="col-md-4 pull-right">
+</div>
+</div>
+
+<!-- <div class="col-sm-4 pull-right">
 <div class="panel panel-default">
 <div class="panel-heading"> <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
 <div class="panel-body pull-right" >
@@ -95,7 +96,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/1.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur  <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -103,7 +104,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/2.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur  <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -111,7 +112,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/3.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur  <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -119,7 +120,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/4.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -127,7 +128,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/5.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -135,7 +136,7 @@
 <table cellpadding="4">
 <tr>
 <td><img src="images/6.png" width="60" class="img-circle" /></td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+<td>Lorem ipsum dolor sit amet, consectetur <a href="#">Read more...</a></td>
 </tr>
 </table>
 </li>
@@ -152,7 +153,4 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>  -->
-</div>
+</div> -->

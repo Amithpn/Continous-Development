@@ -12,6 +12,7 @@ salesApp.controller(
 					
 					$scope.styleClassH = "active";
 					$scope.isHome = true;
+					$scope.infoPanel = false;
 					
 					$scope.styleClassP = "";
 					$scope.isPurchase = "";
