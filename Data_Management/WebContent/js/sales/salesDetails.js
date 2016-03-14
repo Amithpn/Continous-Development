@@ -95,9 +95,12 @@ salesApp.controller(
 						$scope.add = true;
 						 $scope.purchaseOrderList.push({
 							 	itemId:0,
-							 	itemName : '' , 
+							 	itemName : '' ,
+								uom: '',
 							 	quantity : 0,
-							 	price : 0
+							 	unitPrice : 0,
+								amount: '',
+								discount: 0
 					  });
 						 
 					}

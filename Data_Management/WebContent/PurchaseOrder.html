@@ -25,18 +25,38 @@
 <div ng-repeat="order in purchaseOrderList" ng-show="add">
 
 				<div class="col-xs-2">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" class="input-sm"  ng-model="order.itemId">
+				</div>
+				
+				<div class="col-xs-2">
 				<label>Item Name: </label>
-				<input type="text" name="itemName" class="form-control"  ng-model="order.itemName">
+				<input type="text" name="itemName" class="input-sm"  ng-model="order.itemName">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>UOM: </label>
+				<input type="text" name="itemName" class="input-sm"  ng-model="order.uom">
 				</div>
 				
 				<div class="col-xs-2">
 				<label>Quantity: </label>
-				<input type="text" name="quantity" class="form-control"  ng-model="order.quantity">
+				<input type="text" name="quantity" class="input-sm"  ng-model="order.quantity">
 				</div>
 				
 				<div class="col-xs-2">
-				<label>Price: </label>
-				<input type="text" name="price" class="form-control"  ng-model="order.price">
+				<label>Unit Price: </label>
+				<input type="text" name="price" class="input-sm"  ng-model="order.unitPrice">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Amount: </label>
+				<input type="text" name="quantity" class="input-sm"  ng-model="order.amount">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Discount: </label>
+				<input type="text" name="quantity" class="input-sm"  ng-model="order.discount">
 				</div>
 				<br><br><br>
 </div>
@@ -55,7 +75,7 @@
 
 <br><br><br>
 <div class="col-xs-3">
-<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" class="form-control" name="address"></textarea>
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="2" cols="2" class="form-control" name="address"></textarea>
 </div>
 <br><br><br>
 <div class="form-group"> 
