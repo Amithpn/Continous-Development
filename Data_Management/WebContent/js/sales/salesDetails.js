@@ -107,12 +107,13 @@ salesApp.controller(
 					$scope.addQuotation = function() {
 						$scope.addQuote = true;
 						 $scope.quotationList.push({
-							 	itemId: 0,
-							 	itemName : '' , 
-							 	itemDesc : '',
-							 	unitPrice: 0,
+							 	itemId:0,
+							 	itemName : '' ,
+								uom: '',
 							 	quantity : 0,
-							 	totalAmt : 0
+							 	unitPrice : 0,
+								amount: '',
+								discount: 0
 					  });
 						 
 					}

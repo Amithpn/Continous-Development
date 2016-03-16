@@ -28,38 +28,42 @@
 <br><br>
 <div class="col-sm-12">
 <div  ng-show="addQuote" ng-repeat="quote in quotationList" >
-				<br><br>
-				<div class="col-xs-2">
+				<br>
+				<div class="col-xs-2" style="width:150px">
 				<label>Item Id: </label>
-				<input type="text" class="form-control" name="itemName" ng-model="quote.itemId">
+				<input type="text" name="itemName" class="form-control"  ng-model="order.itemId">
 				</div>
-
-				<div class="col-xs-2">
+				
+				<div class="col-xs-2" style="width:150px">
 				<label>Item Name: </label>
-				<input type="text" class="form-control" name="itemName" ng-model="quote.itemName">
+				<input type="text" name="itemName" class="form-control"  ng-model="order.itemName">
 				</div>
-
-				<div class="col-xs-2">
-				<label>Item Description: </label>
-				<input type="text" class="form-control" name="itemName" ng-model="quote.itemDesc">
+				
+				<div class="col-xs-2" style="width:150px">
+				<label>UOM: </label>
+				<input type="text" name="itemName" class="form-control"  ng-model="order.uom">
 				</div>
-
-				<div class="col-xs-2">
-				<label>Unit Price: </label>
-				<input type="text" class="form-control" name="itemName" ng-model="quote.unitPrice">
-				</div>
-
-				<div class="col-xs-2">
+				
+				<div class="col-xs-2" style="width:150px">
 				<label>Quantity: </label>
-				<input type="text" class="form-control" name="quantity" ng-model="quote.quantity">
+				<input type="text" name="quantity" class="form-control"  ng-model="order.quantity">
 				</div>
-
-				<div class="col-xs-2">
-				<label>Total Amount: </label>
-				<input type="text" class="form-control" name="price" ng-model="quote.totalAmt">
+				
+				<div class="col-xs-2" style="width:150px">
+				<label>Unit Price: </label>
+				<input type="text" name="price" class="form-control"  ng-model="order.unitPrice">
 				</div>
-				<br>
-				<br>
+				
+				<div class="col-xs-2" style="width:150px">
+				<label>Amount: </label>
+				<input type="text" name="quantity" class="form-control"  ng-model="order.amount">
+				</div>
+				
+				<div class="col-xs-2" style="width:150px">
+				<label>Discount: </label>
+				<input type="text" name="quantity" class="form-control"  ng-model="order.discount">
+				</div>
+				<br><br><br>
 </div>
 <br>
 <br>
