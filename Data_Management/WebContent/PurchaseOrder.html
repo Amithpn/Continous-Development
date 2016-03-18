@@ -24,53 +24,54 @@
 <br>
 <div ng-repeat="order in purchaseOrderList" ng-show="add">
 
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Item Id: </label>
 				<input type="text" name="itemName" class="form-control"  ng-model="order.itemId">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Item Name: </label>
 				<input type="text" name="itemName" class="form-control"  ng-model="order.itemName">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>UOM: </label>
 				<input type="text" name="itemName" class="form-control"  ng-model="order.uom">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Quantity: </label>
 				<input type="text" name="quantity" class="form-control"  ng-model="order.quantity">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Unit Price: </label>
 				<input type="text" name="price" class="form-control"  ng-model="order.unitPrice">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Amount: </label>
 				<input type="text" name="quantity" class="form-control"  ng-model="order.amount">
 				</div>
 				
-				<div class="col-xs-2" style="width:150px">
+				<div class="col-xs-2" style="width:140px">
 				<label>Discount: </label>
 				<input type="text" name="quantity" class="form-control"  ng-model="order.discount">
 				</div>
-				<br><br><br>
 </div>
 </div>
 <!-- Added two more items -->
-<div class="well  well-sm" style="width:50%">Payment Terms and Conditions:</div>
-<div class="form-group">
-<input type="text" class="form-control" name="vendor" value=""></div>
-
-<div class="well  well-sm" style="width:50%">Delivery Terms and Conditions:</div>
-<div class="form-group">
-<input type="text" class="form-control" name="vendor" value=""></div>
-
 <div class="col-sm-7">
+<br><br>
+<div class="well  well-sm" style="width:50%">Payment Terms and Conditions:</div>
+<div class="form-group" style="width:240px">
+<input type="text" class="form-control" name="paymentTnC" value=""></div>
+<br>
+<div class="well  well-sm" style="width:50%">Delivery Terms and Conditions:</div>
+<div class="form-group" style="width:240px">
+<input type="text" class="form-control" name="deliveyTnC" value=""></div>
+
+
 <br>
 <div class="well  well-sm" style="width:50%">Ship To:</div>
 
