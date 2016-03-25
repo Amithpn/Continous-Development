@@ -1,0 +1,78 @@
+<div ng-show="isInvoice" style="margin-left:70px !important;">
+<h2>Invoice</h2>
+
+<div class="col-sm-7">
+<form method="get" name="quotationForm" class="form-inline">
+
+
+<div class="well well-sm" style="width:50%">Vendor Details:</div>
+
+<div class="form-group">
+<label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value="">
+</div>
+<div class="form-group">
+<label>Vendor Name: </label><input type="text" class="form-control" name="vendorName" >
+</div>
+<br>
+<br>
+<div class="form-group">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" class="form-control" cols="25" name="address">
+</textarea>
+</div>
+
+<br>
+<br>
+<div class="form-group">
+<button type="button" class="btn btn-info" ng-click="addQuotation()">
+    <span class="glyphicon glyphicon-plus"></span>  Add Item Details
+</button>
+</div>
+</div>
+<br><br>
+
+<div class="col-sm-12">
+
+<div ng-repeat="quote in quotationList" ng-show="addQuote">
+				
+				<br><br>
+				<div class="col-xs-2">
+				<label>Item Id: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemId">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Name: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemName">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Item Description: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.itemDesc">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Unit Price: </label>
+				<input type="text" name="itemName" class="form-control" ng-model="quote.unitPrice">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Quantity: </label>
+				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
+				</div>
+				
+				<div class="col-xs-2">
+				<label>Total Amount: </label>
+				<input type="text" name="price" class="form-control" ng-model="quote.totalAmt">
+				</div>
+				<br>
+				<br>				
+
+</div>
+<br>
+<br>
+<div class="form-group"> 
+    <button type="submit" class="btn btn-info">Submit</button>
+</div>
+</form>
+</div>
+</div>

@@ -20,6 +20,9 @@ salesApp.controller(
 					$scope.styleClassQ = "";
 					$scope.Quotation = "";
 					
+					$scope.styleClassT = "";
+					$scope.Invoice = "";
+					
 					$scope.styleClassI = "";
 					$scope.isInventory = "";
 					
@@ -40,7 +43,9 @@ salesApp.controller(
 						$scope.styleClassP = "";
 						$scope.isPurchase = "";
 						$scope.styleClassQ = "";
+						$scope.styleClassT = "";
 						$scope.isQuotation = "";
+						$scope.isInvoice = "";
 						$scope.styleClassI = "";
 						$scope.isInventory = "";
 						$scope.styleClassS = "";
@@ -76,21 +81,31 @@ salesApp.controller(
 						$scope.styleClassQ="active";
 						$scope.isQuotation = true;
 					}
+					
+					$scope.showInvoice = function() {
+						clear();
+						$scope.styleClassT="active";
+						$scope.isInvoice = true;
+					}
+					
 					$scope.showEnquiry = function() {
 						clear();
 						$scope.styleClassQ="active";
 						$scope.isEnquiry = true;
 					}
+					
 					$scope.showInventory = function() {
 						clear();
 						$scope.styleClassI="active";
 						$scope.isInventory = true;
 					}
+					
 					$scope.showSales = function() {
 						clear();
 						$scope.styleClassS="active";
 						$scope.isSales = true;
 					}
+					
 					$scope.addItems = function() {
 						$scope.add = true;
 						 $scope.purchaseOrderList.push({
