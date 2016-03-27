@@ -5,91 +5,90 @@
 <form method="get" name="quotationForm" class="form-inline">
 
 
-<div class="well well-sm" style="width:50%">Vendor Details:</div>
-
-<div class="form-group">
+<div class="col-xs-3">
 <label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+<div class="col-xs-3">
 <label>Vendor Name: </label><input type="text" class="form-control" name="vendorName" >
 </div>
-<div class="form-group">
+<div class="col-xs-3">
 <label>P.O NO:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+<div class="col-xs-3">
 <label>Pay Type: </label><input type="text" class="form-control" name="vendorName" >
 </div>
-<div class="form-group">
+<div class="col-xs-3">
 <label>Inv NO:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+<div class="col-xs-3">
 <label>Inv Data: </label><input type="text" class="form-control" name="vendorName" >
 </div>
-<div class="form-group">
+
+
+<div class="col-xs-3">
 <label>Vendor TIN NO:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+
+<div class="col-xs-3">
 <label>CST NO: </label><input type="text" class="form-control" name="vendorName" >
 </div>
-<br>
-<br>
-<div class="form-group">
+<div class="col-xs-3">
 <label>Vendor Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" class="form-control" cols="25" name="address">
 </textarea>
 </div>
 
-<br>
-<br>
+<br><br><br>
 <div class="form-group">
+<br><br><br><br><br><br><br><br><br>
 <button type="button" class="btn btn-info" ng-click="addQuotation()">
     <span class="glyphicon glyphicon-plus"></span>  Add Item Details
 </button>
 </div>
 </div>
-<br><br>
+<br><br><br>
 
 <div class="col-sm-12">
 
 <div ng-repeat="quote in quotationList" ng-show="addQuote">
 				
 				<br><br>
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Item Id: </label>
 				<input type="text" name="itemName" class="form-control" ng-model="quote.itemId">
 				</div>
 				
-				<div class="col-xs-2">
-				<label>Item Description: </label>
+				<div class="col-xs-1">
+				<label>Item Descr: </label>
 				<input type="text" name="itemName" class="form-control" ng-model="quote.itemDesc">
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Unit Price: </label>
 				<input type="text" name="itemName" class="form-control" ng-model="quote.unitPrice">
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Quantity: </label>
 				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Total: </label>
 				<input type="text" name="price" class="form-control" ng-model="quote.totalAmt">
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Tax percent: </label>
 				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 				<label>Tax Amount: </label>
 				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
 				</div>
 				
-				<div class="col-xs-2">
-				<label>Total Amount: </label>
+				<div class="col-xs-1">
+				<label>Tot Amt: </label>
 				<input type="text" name="quantity" class="form-control" ng-model="quote.quantity">
 				</div>
 				<br>
@@ -99,26 +98,37 @@
 </div>
 <br>
 <br>
-<div class="form-group" align="left">
+<div class="col-xs-3" align="left">
+<br>
+<br>
 <label>Total:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+<div class="col-xs-3">
+<br>
+<br>
 <label>Total Tax: </label><input type="text" class="form-control" name="vendorName" >
 </div>
-<div class="form-group">
+<div class="col-xs-3">
+<br>
+<br>
 <label>Other Tax:</label> <input type="text" class="form-control" name="vendor" value="">
 </div>
-<div class="form-group">
+<div class="col-xs-3">
+<br>
+<br>
 <label>Total Amount: </label><input type="text" class="form-control" name="vendorName" >
 </div>
 <br>
-<div class="form-group">
+<div class="col-xs-3">
+<br>
+<br>
 <label>Declaration: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" class="form-control" cols="25" name="address">
 </textarea>
 </div>
 <br>
-<br>
+<br><br><br><br>
 <div class="form-group"> 
+<br><br><br><br><br>
     <button type="submit" class="btn btn-info">Submit</button>
 </div>
 </form>
