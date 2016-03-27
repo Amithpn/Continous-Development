@@ -5,16 +5,20 @@
 <div class="col-sm-7">
 <form method="get" name="vendorForm" class="form-inline" role="form">
 
-<div class="well  well-sm" style="width:50%">Vendor Details:</div>
 <div class="form-group">
 <label>Date:</label> <input type="text" class="form-control" name="vendor" value=""></div>
 
 <div class="form-group">
-<label>Payee Name: </label><input type="text" class="form-control" name="vendorName" ></div>
+<label>Receivers Name: </label><input type="text" class="form-control" name="vendorName" ></div>
 
 <br><br>
 <div class="form-group">
-<label>Invoice#: </label><input type="text" class="form-control" name="vendorName" ></div>
+<label>References: </label><select name="reference to" class="form-control">
+	<option value="ALL">Reference To</option>
+    <option value="InvoiceNo">Invoice#</option>
+    <option value="PO#">PO#</option>
+  </select>
+</div>
 
 <br><br>
 
@@ -30,9 +34,6 @@
   </select>
 </div>
 <br><br>
-<div class="form-group">
-<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="15" class="form-control" name="address"></textarea>
-</div>
 
  <br><br>
 <div class="form-group"> 
