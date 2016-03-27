@@ -7,59 +7,33 @@
 
 <div class="well  well-sm" style="width:50%">Vendor Details:</div>
 <div class="form-group">
-<label>Vendor Id:</label> <input type="text" class="form-control" name="vendor" value=""></div>
+<label>Date:</label> <input type="text" class="form-control" name="vendor" value=""></div>
 
 <div class="form-group">
-<label>Vendor Name: </label><input type="text" class="form-control" name="vendorName" ></div>
+<label>Payee Name: </label><input type="text" class="form-control" name="vendorName" ></div>
 
 <br><br>
 <div class="form-group">
-<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="25" class="form-control" name="address"></textarea>
-</div>
-<!-- <tr>
-<td align="right">
-<h3>Item Details:</h3>
-</td>
-<td><button type="button" type="button" ng-click="addQuotation()">+</button></td>
-</tr>
-<tr>
-<table cellspacing="1"  width="90%" align="center" ng-repeat="quote in quotationList" ng-show="addNewVendor" >
-				<tr>
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Item Id: </label>
-				<input type="text" name="itemName" ng-model="quote.itemId">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Item Name: </label>
-				<input type="text" name="itemName" ng-model="quote.itemName">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Item Description: </label>
-				<input type="text" name="itemName" ng-model="quote.itemDesc">
-				</td>
-				
-				<td class="input-list style-2 clearfix" align="left">
-				<label>Unit Price: </label>
-				<input type="text" name="itemName" ng-model="quote.unitPrice">
-				</td>
-				
-				<td class="input-list style-2 clearfix">
-				<label>Quantity: </label>
-				<input type="text" name="quantity" ng-model="quote.quantity">
-				</td>
-				
-				<td class="input-list style-2 clearfix">
-				<label>Total Amount: </label>
-				<input type="text" name="price" ng-model="quote.totalAmt">
-				</td>
-				</tr>
-		
-</table>
+<label>Invoice#: </label><input type="text" class="form-control" name="vendorName" ></div>
 
-</tr>
- -->
+<br><br>
+
+<div class="form-group">
+<label>Payment Mode: </label><select name="Mode of Delivery" class="form-control">
+	<option value="ALL">Mode of Delivery</option>
+    <option value="Cash">Cash</option>
+    <option value="Cheque">Cheque</option>
+    <option value="NEFT">NEFT</option>
+    <option value="RTGS">RTGS</option>
+    <option value="DD">DD</option>
+    <option value="CreditCard/DebitCard">CreditCard/DebitCard</option>
+  </select>
+</div>
+<br><br>
+<div class="form-group">
+<label>Address: </label> &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="15" class="form-control" name="address"></textarea>
+</div>
+
  <br><br>
 <div class="form-group"> 
     <button type="submit" class="btn btn-info">Submit</button>
