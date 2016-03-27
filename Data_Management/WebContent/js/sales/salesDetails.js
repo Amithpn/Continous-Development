@@ -23,6 +23,12 @@ salesApp.controller(
 					$scope.styleClassT = "";
 					$scope.Invoice = "";
 					
+					$scope.styleClassU = "";
+					$scope.Payable = "";
+					
+					$scope.styleClassV = "";
+					$scope.Receivable = "";
+					
 					$scope.styleClassI = "";
 					$scope.isInventory = "";
 					
@@ -44,8 +50,12 @@ salesApp.controller(
 						$scope.isPurchase = "";
 						$scope.styleClassQ = "";
 						$scope.styleClassT = "";
+						$scope.styleClassU = "";
+						$scope.styleClassV = "";
 						$scope.isQuotation = "";
 						$scope.isInvoice = "";
+						$scope.isPayable = "";
+						$scope.isReceivable = "";
 						$scope.styleClassI = "";
 						$scope.isInventory = "";
 						$scope.styleClassS = "";
@@ -86,6 +96,18 @@ salesApp.controller(
 						clear();
 						$scope.styleClassT="active";
 						$scope.isInvoice = true;
+					}
+					
+					$scope.showPayable = function() {
+						clear();
+						$scope.styleClassU="active";
+						$scope.isPayable = true;
+					}
+					
+					$scope.showReceivable = function() {
+						clear();
+						$scope.styleClassV="active";
+						$scope.isReceivable = true;
 					}
 					
 					$scope.showEnquiry = function() {
