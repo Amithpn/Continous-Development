@@ -13,12 +13,11 @@
 
 <br><br>
 <div class="form-group">
-<label>References: </label><select name="reference to" class="form-control">
-	<option value="ALL">Reference To</option>
-    <option value="InvoiceNo">Invoice#</option>
-    <option value="PO#">PO#</option>
-  </select>
-</div>
+<label>References: </label><select ng-model="reference" ng-options="choice as choice for (idx, choice) in references.split(',')" ng-change="displayRefVal(reference)" class="form-control">
+	<option value="">Select Reference</option>
+	</select>
+</div>&nbsp;&nbsp;
+<div class="form-group" ng-bind="referenceVal"></div>
 
 <br><br>
 

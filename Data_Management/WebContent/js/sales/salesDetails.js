@@ -43,6 +43,15 @@ salesApp.controller(
 					
 					$scope.enableEdit = true;
 					
+					$scope.reference = 'Select Reference';
+					$scope.referenceVal = '';
+					$scope.references = "Invoice#,PO#";
+					
+					$scope.bankList = "Canara Bank,State Bank Of India,Union Bank,CITI Bank";
+					$scope.modeType = "Cheque#,A/C#,A/C Type";
+					$scope.isBank = false;
+					$scope.showType = false;
+					
 					var clear = function() {
 						$scope.styleClassH = "";
 						$scope.isHome = "";
@@ -73,6 +82,8 @@ salesApp.controller(
 						$scope.checked='';
 						$scope.isVendor = false;
 						$scope.addNewVendor = false;
+						$scope.isBank = false;
+						$scope.showType = false;
 					}
 					$scope.showHome = function() {
 						clear();
@@ -237,6 +248,20 @@ salesApp.controller(
 						clear();
 						$scope.isVendor = true;
 						$scope.addNewVendor = true;
+					}
+					$scope.displayRefVal = function(value) {
+						if("Invoice#" == value) {
+							$scope.referenceVal = 'Invoice# 1234';
+						} else if("PO#" == value) {
+							$scope.referenceVal = 'PO# 2233';
+						}
+					}
+					$scope.showBank = function() {
+						clear();
+						$scope.isBank = true;
+					}
+					$scope.handleBankChange = function() {
+						$scope.showType = true;
 					}
 					
 				}
