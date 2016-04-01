@@ -3,7 +3,7 @@
 <h3>Receivable Amount Info</h3>
 
 <div class="col-sm-7">
-<form method="get" name="vendorForm" class="form-inline" role="form">
+<form method="get" name="receivableForm" class="form-inline" role="form">
 
 <div class="form-group">
 <label>Date:</label> <input type="text" class="form-control" name="vendor" value=""></div>
@@ -11,26 +11,28 @@
 <div class="form-group">
 <label>Receivers Name: </label><input type="text" class="form-control" name="vendorName" ></div>
 
+<div class="form-group">
+<label>Amount: </label><input type="text" class="form-control" name="amount" ></div>
+
 <br><br>
 <div class="form-group">
 <label>References: </label><select ng-model="reference" ng-options="choice as choice for (idx, choice) in references.split(',')" ng-change="displayRefVal(reference)" class="form-control">
 	<option value="">Select Reference</option>
 	</select>
 </div>&nbsp;&nbsp;
-<div class="form-group" ng-bind="referenceVal"></div>
+<div class="form-group" ng-show="inputRef"><label>{{referenceVal}}</label>
+<input type="text" class="form-control" name="referenceField" >
+</div>
 
 <br><br>
 
 <div class="form-group">
-<label>Payment Mode: </label><select name="Mode of Delivery" class="form-control">
-	<option value="ALL">Mode of Delivery</option>
-    <option value="Cash">Cash</option>
-    <option value="Cheque">Cheque</option>
-    <option value="NEFT">NEFT</option>
-    <option value="RTGS">RTGS</option>
-    <option value="DD">DD</option>
-    <option value="CreditCard/DebitCard">CreditCard/DebitCard</option>
-  </select>
+<label>Payment Mode: </label><select ng-model="paymentModeSelected" ng-options="choice as choice for (idx, choice) in paymentList.split(',')" ng-change="handlePaymentMode(paymentModeSelected)" class="form-control">
+	<option value="">Select Payment Mode</option>
+	</select>
+</div>&nbsp;&nbsp;
+<div class="form-group" ng-show="inputPayment"><label>{{paymentLabel}}</label>
+<input type="text" class="form-control" name="paymentInput" >
 </div>
 <br><br>
 

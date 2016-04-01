@@ -32,13 +32,16 @@
 label {
 font-size: smaller;
 }    
+.well {
+background:rgb(42,171,210);
+}
 </style>
 </head>
 <body>
 
 <div ng-controller="salesDetailsController" style="width:100%" class="container-fluid">
-<div class="well well-lg">
-<h2>Data Management</h2></div>
+<div class="well well-sm">
+<h2 style="color:white;">Data Management</h2></div>
 
 
 <div ng-include="'Menu.html'">
@@ -145,6 +148,10 @@ font-size: smaller;
 <div ng-include="'Receivable.html'">
 </div> 
 <div ng-include="'Bank.html'">
+</div>
+<div ng-include="'Cash.html'">
+</div>
+<div ng-include="'Expenses.html'">
 </div>
  
 </div>

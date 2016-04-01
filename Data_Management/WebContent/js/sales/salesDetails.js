@@ -46,11 +46,18 @@ salesApp.controller(
 					$scope.reference = 'Select Reference';
 					$scope.referenceVal = '';
 					$scope.references = "Invoice#,PO#";
+					$scope.inputRef = false;
+					$scope.inputPayment = false;
 					
 					$scope.bankList = "Canara Bank,State Bank Of India,Union Bank,CITI Bank";
 					$scope.modeType = "Cheque#,A/C#,A/C Type";
 					$scope.isBank = false;
 					$scope.showType = false;
+					
+					$scope.isCash = false;
+					
+					$scope.isExpenses = false;
+					$scope.paymentList = "Cash,Cheque,NEFT,RTGS,DD,Credit/Debit Card";
 					
 					var clear = function() {
 						$scope.styleClassH = "";
@@ -84,6 +91,10 @@ salesApp.controller(
 						$scope.addNewVendor = false;
 						$scope.isBank = false;
 						$scope.showType = false;
+						$scope.isCash = false;
+						$scope.isExpenses = false;
+						$scope.inputRef = false;
+						$scope.inputPayment = false;
 					}
 					$scope.showHome = function() {
 						clear();
@@ -251,9 +262,14 @@ salesApp.controller(
 					}
 					$scope.displayRefVal = function(value) {
 						if("Invoice#" == value) {
-							$scope.referenceVal = 'Invoice# 1234';
+							$scope.inputRef = true;
+							$scope.referenceVal = 'Invoice#';
 						} else if("PO#" == value) {
-							$scope.referenceVal = 'PO# 2233';
+							$scope.inputRef = true;
+							$scope.referenceVal = 'PO#';
+						} else {
+							$scope.inputRef = false;
+							$scope.referenceVal = '';
 						}
 					}
 					$scope.showBank = function() {
@@ -262,6 +278,32 @@ salesApp.controller(
 					}
 					$scope.handleBankChange = function() {
 						$scope.showType = true;
+					}
+					$scope.showCash = function() {
+						clear();
+						$scope.isCash = true;
+					}
+					$scope.showExpenses = function() {
+						clear();
+						$scope.isExpenses = true;
+					}
+					$scope.handlePaymentMode = function(selected) {
+						if("Cheque" == selected) {
+							$scope.inputPayment = true;
+							$scope.paymentLabel = "Cheque#";
+						} else if("NEFT" == selected || "RTGS" == selected) {
+							$scope.inputPayment = true;
+							$scope.paymentLabel = "Txn#";
+						} else if("DD" == selected) {
+							$scope.inputPayment = true;
+							$scope.paymentLabel = "DD#";
+						} else if("Credit/Debit Card" == selected) {
+							$scope.inputPayment = true;
+							$scope.paymentLabel = "#";
+						} else {
+							$scope.inputPayment = false;
+							$scope.paymentLabel = "";
+						}
 					}
 					
 				}

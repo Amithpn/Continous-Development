@@ -1,8 +1,8 @@
-<div ng-show="isBank" style="margin-left:70px !important;">
-<h2>Bank Details</h2>
+<div ng-show="isCash" style="margin-left:70px !important;">
+<h2>Cash Details</h2>
 
 <div class="col-sm-7">
-<form method="POST" name="bankForm" class="form-inline">
+<form method="POST" name="cashForm" class="form-inline">
 
 <div class="form-group">
 <label>Date: </label>&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" name="date" >
@@ -10,17 +10,6 @@
 
 <div class="form-group">
 <label>Reference#: </label>&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" name="date" >
-</div>
-<br><br><br>
-<div class="form-group">
-<label>Bank: </label>&nbsp;&nbsp;&nbsp;<select ng-model="bankSelected" ng-options="choice as choice for (idx, choice) in bankList.split(',')" ng-change="handleBankChange()" class="form-control">
-	<option value="">Select Bank</option>
-	</select>
-</div>
-<div class="form-group" ng-show="showType">
-<label>Type: </label>&nbsp;&nbsp;&nbsp;<select ng-model="typeSelected" ng-options="choice as choice for (idx, choice) in modeType.split(',')" class="form-control">
-	<option value="">Select type</option>
-	</select>
 </div>
 <br><br><br>
 
