@@ -11,14 +11,23 @@
 <div class="form-group">
 <label>Reference#: </label>&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" name="date" >
 </div>
-<br><br><br>
+
 <div class="form-group">
 <label>Bank: </label>&nbsp;&nbsp;&nbsp;<select ng-model="bankSelected" ng-options="choice as choice for (idx, choice) in bankList.split(',')" ng-change="handleBankChange()" class="form-control">
 	<option value="">Select Bank</option>
 	</select>
 </div>
-<div class="form-group" ng-show="showType">
-<label>Type: </label>&nbsp;&nbsp;&nbsp;<select ng-model="typeSelected" ng-options="choice as choice for (idx, choice) in modeType.split(',')" class="form-control">
+<br><br><br>
+<div class="form-group"><label>Cheque#</label>
+<input type="text" class="form-control" name="chequeNo" >
+</div>
+
+<div class="form-group"><label>A/C#</label>
+<input type="text" class="form-control" name="chequeNo" >
+</div>
+
+<div class="form-group" >
+<label>Type: </label>&nbsp;&nbsp;&nbsp;<select ng-model="typeSelected" ng-options="choice as choice for (idx, choice) in acType.split(',')" class="form-control">
 	<option value="">Select type</option>
 	</select>
 </div>

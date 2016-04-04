@@ -51,8 +51,9 @@ salesApp.controller(
 					
 					$scope.bankList = "Canara Bank,State Bank Of India,Union Bank,CITI Bank";
 					$scope.modeType = "Cheque#,A/C#,A/C Type";
+					$scope.acType = "Savings, Current";
 					$scope.isBank = false;
-					$scope.showType = false;
+					$scope.showBankDetails = false;
 					
 					$scope.isCash = false;
 					
@@ -90,7 +91,7 @@ salesApp.controller(
 						$scope.isVendor = false;
 						$scope.addNewVendor = false;
 						$scope.isBank = false;
-						$scope.showType = false;
+						$scope.showBankDetails = false;
 						$scope.isCash = false;
 						$scope.isExpenses = false;
 						$scope.inputRef = false;
@@ -277,7 +278,8 @@ salesApp.controller(
 						$scope.isBank = true;
 					}
 					$scope.handleBankChange = function() {
-						$scope.showType = true;
+						$scope.showBankDetails = true;
+						
 					}
 					$scope.showCash = function() {
 						clear();
